@@ -4,13 +4,21 @@ Dare output relativo.*/
 
 //chiedi parola
 let parola = prompt("inserire parola");
+console.log(parola);
 
-//crea funzione
-function palindroma (){
+//capire se la parola inserita è palindroma
+let parolaInvertita = invert(parola);
+console.log(parolaInvertita);
 
-    //condizione quando una parola è palindroma
-    
+if (parolaInvertita === parola) {
+    console.log("la parola è palindroma");
+} else {
+    console.log("la parola non è palindroma");
 }
 
+//funzione per trasformare parola in array di caratteri, ribaltare array e fare nuova stringa per il confronto
+function invert(word){
+    let reverseWord = word.split('').reverse().join(''); 
 
-//output
+    return reverseWord;
+}
